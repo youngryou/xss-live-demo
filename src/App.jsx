@@ -2,8 +2,12 @@ import { useState, useEffect } from 'react'
 import { slideData } from './data/slideData'
 
 import HomeSlide from './components/slides/HomeSlide'
+import WhatIsXssSlide from './components/slides/WhatIsXssSlide'
+import HowToHackingSlide from './components/slides/HowToHackingSlide'
 import XssDemo from './components/XssDemo'
+import HowToDefendSlide from './components/slides/HowToDefendSlide'
 import EndSlide from './components/slides/EndSlide'
+import ReferenceSlide from './components/slides/ReferenceSlide'
 // import './App.css'
 
 function App() {
@@ -24,6 +28,7 @@ function App() {
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide])
 
   const renderSlide = () => {
@@ -31,10 +36,18 @@ function App() {
     switch (currentId) {
       case 'HOME':
         return <HomeSlide />
+      case 'WHAT_IS_XSS':
+        return <WhatIsXssSlide />
+      case 'HOW_TO_HACKING':
+        return <HowToHackingSlide />
       case 'DEMO':
         return <XssDemo />
+      case 'HOW_TO_DEFEND':
+        return <HowToDefendSlide />
       case 'END':
         return <EndSlide />
+      case 'REFERENCE':
+        return <ReferenceSlide />
       default:
         return <div>Slide Not Found</div>
     }
