@@ -242,12 +242,27 @@ button:hover {
 }
 
 /* Component */
-.badge--green {
+.badge-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  border-radius: 999px;
+  border: var(--green-h) solid 1.5px;
   background: var(--green-bg);
   color: var(--green-h);
+
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  width: fit-content;
+  padding: 0.1rem 0.5rem;
 }
 
 .badge--yellow {
+  border-color: var(--yellow);
   background: var(--yellow-bg);
   color: var(--yellow);
 }
@@ -262,6 +277,10 @@ button:hover {
   margin: 0 2rem;
 }
 
+.content--center {
+  margin: auto;
+}
+
 .text--inline {
   display: inline-flex;
   gap: 12px;
@@ -271,6 +290,10 @@ button:hover {
 .text--mono {
   font-family: var(--mono);
   display: inline-flex;
+}
+
+.text--sm {
+  font-size: 0.8rem;
 }
 
 .text--center {

@@ -1,21 +1,22 @@
 function EndSlide() {
   return (
     <div className="slide">
-      <h1>This is the end!</h1>
+      <div className="contents content--center text--center">
+        <p className="--grey">Cross-Site Scripting (XSS)</p>
 
-      <div className="contents">
-        <p>XSS Attack Successful! Session Hijacked!</p>
-      </div>
+        <h2>
+          We can <span className="--blue">Defend</span> against{' '}
+          <span className="--red">Hacking!</span>
+        </h2>
 
-      <h1>Thank you!</h1>
+        <p className="--grey">
+          "Writing secure baseline code is what safeguards databases and
+          sensitive user privacy."
+        </p>
+        <p />
+        <p />
 
-      <div>
-        <h4>References:</h4>
-        <ul>
-          <li>aaaa</li>
-          <li>bbbb</li>
-          <li>cccc</li>
-        </ul>
+        <h3 className="--green">Thank You!</h3>
       </div>
     </div>
   )
