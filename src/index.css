@@ -1,3 +1,203 @@
+/* Index CSS */
+
+/* General */
+:root {
+  --white: #f0f6fc;
+  --black: #0e1117;
+  --black--bg: rgba(0, 0, 0, 0.3);
+  --grey: #8b949e;
+  --grey--bg: #171b22;
+
+  --blue: #58a6ff;
+  --red: #f67a6f;
+  --green: #45d681;
+  --green-h: #54ff9b;
+  --green-bg: #0f2c1b;
+  --yellow: #e0d23b;
+  --yellow-bg: #2f2c1c;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 1.2rem var(--sans);
+  letter-spacing: 0.18px;
+
+  color: var(--white);
+  background: var(--black);
+  background-image:
+    radial-gradient(
+      circle at 0% 15%,
+      color-mix(in srgb, var(--white) 15%, transparent) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 100% 95%,
+      color-mix(in srgb, var(--green) 10%, transparent) 0%,
+      transparent 30%
+    );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+textarea {
+  border: var(--grey) solid 1.5px;
+  border-radius: 18px;
+  color: var(--white);
+  background: var(--grey--bg);
+  padding: 1rem 1rem 0rem;
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+}
+
+textarea:focus {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: var(--green);
+  box-shadow:
+    0 0 0 1px var(--green),
+    0 0 20px rgba(69, 214, 129, 0.2);
+  outline: none;
+}
+
+button {
+  background: var(--green--bg);
+  border: var(--green) solid 1.5px;
+  border-radius: 18px;
+  color: var(--green-h);
+  box-shadow: 0 8px 20px -4px rgba(69, 214, 129, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 0rem 1rem;
+}
+
+button:hover {
+  box-shadow: 0 12px 24px -4px rgba(69, 214, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Colours */
+.--white {
+  color: var(--white) !important;
+}
+.--grey {
+  color: var(--grey) !important;
+}
+.--blue {
+  color: var(--blue) !important;
+}
+.--red {
+  color: var(--red) !important;
+}
+.--green {
+  color: var(--green) !important;
+}
+.--yellow {
+  color: var(--yellow) !important;
+}
+
+/* Layout */
+.slide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 3rem;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 1rem 1.5rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+
+  border: var(--grey) solid 1.5px;
+  border-radius: 18px;
+  color: var(--grey);
+  background: var(--black--bg);
+  padding: 1rem;
+}
+
+/* Component */
+.badge--green {
+  background: var(--green-bg);
+  color: var(--green-h);
+}
+
+.badge--yellow {
+  background: var(--yellow-bg);
+  color: var(--yellow);
+}
+
+.box-title {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.text--inline {
+  display: inline-flex;
+  gap: 12px;
+  margin: 0.2rem 1rem;
+}
+
+.text--mono {
+  font-family: var(--mono);
+  display: inline-flex;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.hint {
+  color: var(--grey);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* 
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -34,7 +234,7 @@
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: #0e1117;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -108,4 +308,4 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
-}
+} */
