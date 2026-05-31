@@ -186,6 +186,7 @@ textarea:focus {
 .box {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   /* justify-content: center; */
 
   border: var(--grey) solid 1.5px;
@@ -193,6 +194,13 @@ textarea:focus {
   color: var(--grey);
   background: var(--black-bg);
   padding: 1rem;
+  width: stretch;
+}
+
+.box img {
+  flex: none;
+  height: auto;
+  margin: 1rem 0;
 }
 
 .box--col {
