@@ -51,15 +51,15 @@ function XssDemo() {
 
   return (
     <div className="slide">
-      <h1>
+      <h2>
         <span className="--red">XSS</span> Live{' '}
         <span className="--blue">Demo</span>
-      </h1>
+      </h2>
 
       <div className="contents">
-        <h2 className="text--center">
+        <h3 className="text--center">
           Vulnerable <span className="--green">Free Board</span>
-        </h2>
+        </h3>
         <p className="hint text--center">
           <span className="--red">※ Warning:</span> This component renders raw
           input directly, making it highly vulnerable to XSS.

@@ -41,30 +41,48 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="page">
       {/* Navigation */}
       <nav>
         {slideData.map((slide, index) => (
-          <button key={index} onClick={() => setCurrentSlide(index)}>
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            data-active={currentSlide === index}
+            className="nav-button"
+          >
             {slide.tabName}
           </button>
         ))}
       </nav>
 
       {/* Slide Area */}
-      <div>{renderSlide()}</div>
+      <div className="slide-body">{renderSlide()}</div>
 
       {/* Footer */}
-      <div>
-        <button onClick={prevSlide} disabled={currentSlide === 0}>
+      <div className="divider" />
+      <div className="footer">
+        <p>DEV ACADEMY - BOOTCAMP</p>
+
+        <button
+          onClick={prevSlide}
+          disabled={currentSlide === 0}
+          className="nav-button"
+        >
           ← Prev
         </button>
+
         <button
           onClick={nextSlide}
           disabled={currentSlide === slideData.length - 1}
+          className="nav-button"
         >
           Next →
         </button>
+
+        <p>
+          SLIDE 0{currentSlide + 1} / 0{slideData.length}
+        </p>
       </div>
     </div>
   )
