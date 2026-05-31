@@ -2,7 +2,8 @@ function WhatIsXssSlide() {
   return (
     <div className="slide">
       <h2>
-        What is <span className="--blue">Cross-Site Scripting (XSS)</span>
+        What is <span className="--blue">Cross-Site Scripting</span>{' '}
+        <span className="--red">(XSS)</span>
       </h2>
 
       <div className="contents">
