@@ -1,6 +1,6 @@
 function HomeSlide() {
   return (
-    <div className="slide">
+    <div className="slide slide--home">
       <div className="badge-container">
         <p className="badge">DEV ACADEMY</p>
         <p className="badge badge--yellow">⚡️LIGHTNING TALK</p>
