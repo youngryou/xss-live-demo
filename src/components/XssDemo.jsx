@@ -1,6 +1,10 @@
 import { useState } from 'react'
+import CopyButton from './CopyButton'
 
 function XssDemo() {
+  // Sample Payload
+  const payloadString = `<img src="x" onerror="alert('XSS Attack Successful! Session Hijacked!')">`
+
   const nzDate = new Date()
 
   const dateOptions = {
@@ -93,11 +97,9 @@ function XssDemo() {
         {/* Payload / Attack JS Code */}
         {/* <img src="x" onerror="alert('XSS Attack Successful! Session Hijacked!')"> */}
         <div className="hint text--inline text--mono">
-          <p className="--yellow">Sample Payload:</p>
-          <p>
-            &lt;img src="x" onerror="alert('XSS Attack Successful! Session
-            Hijacked!')"&gt;
-          </p>
+          <p className="--yellow">Sample Payload: </p>
+          <p>{payloadString}</p>
+          <CopyButton text={payloadString} />
         </div>
       </div>
     </div>
