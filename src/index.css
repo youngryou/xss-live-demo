@@ -221,6 +221,12 @@ textarea:focus {
   padding: 0.5rem 1.5rem;
 }
 
+.row {
+  display: flex;
+  flex-direction: column;
+  width: stretch;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -343,6 +349,11 @@ button:hover {
 
   padding: 0.8rem;
   margin: 1rem 0;
+  height: stretch;
+}
+
+.tab {
+  padding-left: 1rem;
 }
 
 .spacer {
