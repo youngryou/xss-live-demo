@@ -52,3 +52,28 @@ Open `http://localhost:5173` (or the port specified in your terminal) in your br
 
 ---
 
+## How to Use
+
+This project combines a presentation with an interactive live demo. Please note the following for the best experience:
+
+- **Full-Screen Recommended:** For an optimal, uncropped view, highly recommend viewing the slides in full-screen mode (press `F11` on Chrome).
+- **Intuitive Navigation:** You can navigate through the slides seamlessly using:
+  - The `Left` and `Right` arrow keys on your keyboard
+  - The top navigation tabs
+  - The `Prev` / `Next` buttons at the bottom of the screen
+- **Interactive Code Demo:** Feel free to leave comments on the demo slides. You can inject actual XSS payloads rather than just plain text to see the browser's behaviour first-hand.
+- **Safe Reset:** Any comments or malicious code you input will not be permanently saved. The data resets completely whenever you switch to another slide or refresh the page.
+
+
+---
+
+## ⚠️ Disclaimer
+This project is built strictly for educational and research purposes. It is illegal and unethical to use these vulnerability testing techniques on unauthorised websites or services.
+
+## Try it Yourself (Test Payloads)
+Copy and paste the snippet below into the comment section during the demo to trigger an XSS attack:
+
+`<img src="x" onerror="alert('XSS Attack Successful! Session Hijacked!')">`
+
+
+---
