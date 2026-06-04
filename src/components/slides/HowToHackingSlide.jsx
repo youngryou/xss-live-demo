@@ -37,7 +37,7 @@ function HowToHackingSlide() {
 
             <img src="src/assets/loop-image.webp" alt="XSS Worm" />
 
-            <h4 className="--red text--right">Loop!</h4>
+            <h4 className="--red text--right">Action & Loop!</h4>
           </div>
         </div>
       </div>
