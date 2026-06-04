@@ -101,6 +101,11 @@ function XssDemo() {
           <p>{payloadString}</p>
           <CopyButton text={payloadString} />
         </div>
+
+        <div className="hint text--inline text--mono">
+          <p className="--red">※ Using URL: </p>
+          <p>{`'https://site.com/#<img src=x onerror=HACKINGCODE>'`}</p>
+        </div>
       </div>
     </div>
   )
