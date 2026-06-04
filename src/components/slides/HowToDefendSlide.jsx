@@ -7,17 +7,18 @@ function HowToDefendSlide() {
 
       <div className="contents">
         <div className="contents--flex">
-          <div className="row">
-            <h4>
+          <div className="box">
+            <h3 className="box-title">
               Context-Aware HTML <span className="--green">Escaping</span>
-            </h4>
+            </h3>
+
+            <p>Convert HTML special letter to string.</p>
+
             <code className="code-box">
               <p className="hint">// JS Code Tag e.g.</p>
               <p className="--green">{`<script>`}</p>
 
-              <div className="spacer" />
-
-              <p className="hint">// Convert HTML special letter to string</p>
+              <p className="hint">// Convert</p>
               <p>
                 {`< → `}
                 <span className="--red">{`&lt;`}</span>
@@ -33,28 +34,18 @@ function HowToDefendSlide() {
 
               <div className="spacer" />
 
-              <p className="hint">// Using</p>
-
-              <p className="--yellow">.replace</p>
-              <p>
-                <span className="--blue">innerHTML</span> →{' '}
-                <span className="--blue">textContent</span> or{' '}
-                <span className="--blue">innerText</span>
-              </p>
-
-              <div className="spacer" />
-
-              <p className="hint">
-                // React automatically escapes data within curly brackets.
-              </p>
+              <p className="hint">// React within curly brackets.</p>
               <p className="--blue">{`{comment.content}`}</p>
             </code>
           </div>
 
-          <div className="row">
-            <h4>
+          <div className="box">
+            <h3 className="box-title">
               HTML <span className="--blue">Sanitisation</span>
-            </h4>
+            </h3>
+
+            <p>Use sanitising library to filter dangerous tags.</p>
+
             <code className="code-box">
               <p className="hint">// Example of 'DOMPurify'</p>
               <p>
@@ -67,59 +58,49 @@ function HowToDefendSlide() {
 
               <p className="hint">// export function to reuse</p>
               <p>
-                <span className="--blue">export const</span> shtml ={' '}
-                <span className="--yellow">(dirtyData)</span>
-                =&gt;
+                <span className="--blue">export</span>{' '}
+                <span className="--green">function</span>{' '}
+                <span className="--red">safeHtml</span>
+                <span className="--yellow">(Data) {`{`}</span>
               </p>
               <p className="tab">
-                DOMPurify.sanitize<span className="--yellow">(dirtyData)</span>;
+                <span className="--blue">return</span> DOMPurify.
+                <span className="--red">sanitize</span>
+                <span className="--yellow">(Data)</span>
               </p>
+              <span className="--yellow">{`}`}</span>
 
               <div className="spacer" />
 
               <p className="hint">// This filters dangerous tags</p>
-              <p className="hint">// {`<script>`} - Block</p>
-              <p className="hint">// {`<h1>, <p>`} - Pass</p>
+              <p className="hint">// {`<script>`} - Block (X)</p>
+              <p className="hint">// {`<h1>, <p>`} - Pass (O)</p>
             </code>
           </div>
 
-          <div className="row">
-            <h4>
+          <div className="box">
+            <h3 className="box-title">
               Content Security Policy <span className="--red">(CSP)</span>
-            </h4>
+            </h3>
+
+            <p>Declare security rules in the browser HTTP header.</p>
+
             <code className="code-box">
-              <p className="hint">// HTTP</p>
-              <p>Content-Security-Policy:</p>
-              <p className="tab">
-                default-src
-                <span className="--blue">'self'</span>;
-              </p>
-              <p className="tab">
-                script-src
-                <span className="--blue">'self'</span>
-                <span className="--green">https://trusted-cdn.com</span>;
-              </p>
-              <p className="tab">
-                object-src
-                <span className="--red">'none'</span>;
-              </p>
+              <p>HTTP</p>
+              <p className="--blue">Content-Security-Policy:</p>
+              <p className="tab hint">// contents to allow...</p>
 
               <div className="spacer" />
 
-              <p className="hint">// HTML</p>
+              <p>HTML</p>
               <p>
-                &lt;<span className="--blue">meta</span>
+                &lt;<span className="--green">meta</span>
               </p>
-              <p className="tab">
+              <p className="tab --blue">
                 http-equiv=
                 <span className="--yellow">"Content-Security-Policy"</span>
               </p>
-              <p className="tab">
-                content=
-                <span className="--green">
-                  "default-src 'self'; script-src 'self'; object-src 'none';"
-                </span>
-              </p>
+              <p className="tab hint">// contents to allow...</p>
               <p>/&gt;</p>
             </code>
           </div>

@@ -221,11 +221,11 @@ textarea:focus {
   padding: 0.5rem 1.5rem;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-direction: column;
   width: stretch;
-}
+} */
 
 .footer {
   display: flex;
@@ -345,11 +345,11 @@ button:hover {
   border-radius: 12px;
   color: var(--white);
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 
   padding: 0.8rem;
-  margin: 1rem 0;
-  height: stretch;
+  margin: 1rem 0 0;
+  /* height: stretch; */
 }
 
 .tab {
