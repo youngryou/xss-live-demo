@@ -69,6 +69,15 @@ h4 {
   font-size: 1.1rem;
 }
 
+li {
+  /* list-style: none; */
+  margin-bottom: 1.5rem;
+}
+
+li p {
+  margin-bottom: 0.5rem;
+}
+
 nav {
   background: rgba(0, 0, 0, 0.4);
   padding: 0.3rem 1.2rem;
@@ -381,7 +390,6 @@ button:hover {
 
 .text--mono {
   font-family: var(--mono);
-  display: inline-flex;
 }
 
 .text--sm {
